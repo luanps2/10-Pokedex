@@ -32,7 +32,7 @@ function showPokemonModal(pokemonData) {
         
         <div class="pokemon-abilities"> 
         ${pokemonData.abilities.map((ability) => `
-            <li class="ability"><img width="64" height="64" src="https://img.icons8.com/sf-black-filled/64/sword.png" alt="sword"/>${ability}</li>
+            <li class="ability"><img width="64" height="64" src="https://img.icons8.com/sf-black-filled/64/sword.png" alt="sword"/> ${ability}</li>
             `).join('')}
             </div>
             
