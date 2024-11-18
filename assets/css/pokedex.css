@@ -1,5 +1,4 @@
 /*#region Types*/
-
 .normal {
     background-color: #a6a877;
 }
@@ -81,10 +80,6 @@
     padding: 0;
     margin: 0;
 
-  
-
-    
-
     & li {
         margin: .5rem;
         display: flex;
@@ -122,8 +117,6 @@
             flex-direction: row;
             align-items: center;
             justify-content: space-around;
-            
-            
 
             & img {
                 max-width: 100%;
@@ -136,6 +129,7 @@
                 list-style: none;
                 filter: brightness(1.1);
                 text-align: center;
+                
 
             }
         }
@@ -163,9 +157,7 @@
       
         &:hover:not(li.type){
 
-           
             color: white;
-           
             border: none;
             cursor: pointer;
             box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.4);
@@ -189,6 +181,12 @@
 
 
 }
+
+.type{
+
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
+}
+
 
 .pagination {
     display: flex;

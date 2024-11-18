@@ -14,7 +14,8 @@ function convertPokemonToLi(pokemon) {
         number: pokemon.number,
         name: pokemon.name,
         photo: pokemon.photo,
-        types: pokemon.types
+        types: pokemon.types,
+        abilities: pokemon.abilities
     })})'>
     <span class="number">#${pokemon.number}</span>
     <span class="name">${pokemon.name}</span>
@@ -22,6 +23,7 @@ function convertPokemonToLi(pokemon) {
     <div class="detail">
         <ol class="types">
             ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+           
         </ol>
 
         <img src="${pokemon.photo}"
@@ -45,16 +47,16 @@ loadPokemonItens(offset, limit)
 loadMoreButton.addEventListener('click', () => {
     offset += limit;
     const qtdRecordWithNextPage = offset + limit
-    
+
     if (qtdRecordWithNextPage >= maxRecords) {
         const newLimit = qtdRecordWithNextPage - maxRecords
         loadPokemonItens(offset, newLimit)
 
         loadMoreButton.parentElement.removeChild(loadMoreButton)
-    }else{
+    } else {
         loadPokemonItens(offset, limit)
     }
-    
+
 })
 
 
